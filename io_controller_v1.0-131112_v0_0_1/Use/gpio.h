@@ -5,6 +5,41 @@
 #include "binary.h"
 #include "utils.h"
 
+/* output pin */
+// OS1	RD5
+// OS2	RD4
+// OS3	RD3
+// OS4	RD2
+// OS5	RD1
+// OS6	RD0
+// OS7	RE7
+// OS8	RE6
+// OS9	RE5
+// OS10	RE4
+// OS11	RE3
+// OS12	RE2
+// OS13	RH0
+// OS14	RH1
+// OS15	RH2
+// OS16	RH3
+/* pin pin */
+// SI1	RB0
+// SI2	RB1
+// SI3	RB2
+// SI4	RB3
+// SI5	RG6
+// SI6	RG5
+// SI7	RF0
+// SI8	RG4
+// SI9	RF7
+// SI10	RF6
+// SI11	RF5
+// SI12	RF4
+// SI13	RF3
+// SI14	RF2
+// SI15	RH7
+// SI16	RH6
+
 typedef enum
 {
     OS01        = 0,
@@ -50,7 +85,8 @@ typedef enum{
     HIGH        = 1
 }gpio_level;
 
-void gpio_write_pin(gpio_out_pin pin, gpio_level value);
-gpio_level gpio_read_pin(gpio_in_pin pin);
+extern void gpio_init(void);
+extern void gpio_write_pin(gpio_out_pin pin, gpio_level value);
+extern gpio_level gpio_read_pin(gpio_in_pin pin);
 
 #endif /* _GPIO_H */
